@@ -1,6 +1,7 @@
 # AtlasHub App
 
-A simple web application to browse and search for countries, view details, filter by region and language, and add countries to a favorites list. This app is built using vanilla JavaScript, HTML, and CSS, and does not rely on any frameworks.
+A simple web application to browse and search for countries, view details, filter by region and language, and add countries to a favorites list. 
+
 
 ## Screensots
 
