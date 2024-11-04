@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Heart, ArrowLeft, Home } from "lucide-react"; // Import Home icon
 import { useNavigate, useParams } from "react-router-dom";
 import StorageManager from "../utils/StorageManager";
+import LoadingSpinner from "./LoadingSpinner";
 
 const InfoItem = ({ label, value }) => (
   <div className="mb-4">
@@ -83,7 +84,7 @@ const CountryDetails = ({ favorites, setFavorites }) => {
     StorageManager.setFavorites(newFavorites);
   };
 
-  if (loading) return <div>Loading...</div>;
+  if (true) return <LoadingSpinner />;
   if (!country) return <div>Country not found</div>;
 
   const isFavorite = favorites.some((f) => f.cca3 === country.cca3);
