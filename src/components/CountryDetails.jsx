@@ -194,32 +194,14 @@ const CountryDetails = ({ favorites, setFavorites }) => {
               <h2 className="text-xl font-semibold text-white mb-4">
                 Border Countries
               </h2>
-              <div
-                className="overflow-hidden pb-4"
-                onWheel={(e) => {
-                  e.preventDefault();
-                  const container = e.currentTarget.querySelector(
-                    ".border-countries-container"
-                  );
-                  if (container) {
-                    container.scrollLeft += e.deltaY > 0 ? 100 : -100; // Smoother scroll with fixed increment
-                  }
-                }}
-              >
+              <div className="relative">
                 <div
-                  className="flex gap-4 overflow-x-auto border-countries-container scrollbar-hide"
+                  className="flex flex-wrap gap-2 md:gap-4 max-h-[120px] overflow-y-auto overflow-x-hidden py-2 px-1"
                   style={{
-                    msOverflowStyle: "none",
-                    scrollbarWidth: "none",
+                    scrollbarWidth: "thin",
+                    scrollbarColor: "rgba(255,255,255,0.3) transparent",
                   }}
                 >
-                  <style>
-                    {`
-          .border-countries-container::-webkit-scrollbar {
-            display: none;
-          }
-        `}
-                  </style>
                   {borderCountries.length > 0 ? (
                     borderCountries.map((border) => (
                       <BorderCountry
